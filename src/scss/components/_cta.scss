@@ -3,23 +3,24 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-auto-rows: auto;
+  height: fit-content;
 
   &__texts {
     @include align(flex, center, left);
     flex-direction: column;
     gap: 3.8rem;
-    padding: 0 8rem;
+    padding: 0 9rem;
 
     &__title {
       font-size: 3.5rem;
-      width: 30rem;
+      width: 38rem;
       color: $vdsBlue;
     }
     &__paragraph {
       font-weight: lighter;
       color: $darkgrayblue;
     }
-    &__link {
+    &__link1 {
       text-decoration: none;
       text-transform: uppercase;
       font-family: "Fraunces", serif;
@@ -32,12 +33,35 @@
         content: "";
         position: absolute;
         top: 69%;
-        width: 27%;
+        width: 14rem;
         height: 1rem;
-
         left: -1%;
         border-radius: 90px;
         background-color: $yellow;
+
+        /* draw behind child elements */
+        z-index: -1;
+      }
+    }
+
+    &__link2 {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: "Fraunces", serif;
+      color: $vdsBlue;
+      font-weight: 900;
+
+      position: relative;
+      z-index: 0;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 69%;
+        width: 14rem;
+        height: 1rem;
+        left: -1%;
+        border-radius: 90px;
+        background-color: $hotRed;
 
         /* draw behind child elements */
         z-index: -1;
@@ -47,9 +71,35 @@
 
   &__image {
     img {
-      object-fit: cover;
       width: 100%;
-      height: 50rem;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
+  }
+}
+.double-container {
+  position: relative;
+}
+
+.row__image__texts {
+  position: absolute;
+  @include align(flex, center, center);
+  text-align: center;
+  flex-direction: column;
+  gap: 3rem;
+  bottom: 4rem;
+  padding: 0 11rem;
+}
+.graphic-design {
+  color: $cyan;
+  .row__texts__title {
+    color: $cyan;
+  }
+}
+.photography {
+  color: $darkblue;
+  .row__texts__title {
+    color: $darkblue;
   }
 }
