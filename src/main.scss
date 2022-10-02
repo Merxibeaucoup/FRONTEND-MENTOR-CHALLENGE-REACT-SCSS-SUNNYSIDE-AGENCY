@@ -3,9 +3,11 @@
 
 // import components
 @use "./scss/components/nav";
+@use "./scss/components/header";
 
 // import abstracts
 @use "./scss/abstracts/variables";
+@use "./scss/abstracts/mixins";
 
 // import uilss
 @use "./scss/utils/utils";
