@@ -1,0 +1,55 @@
+@use "../abstracts/" as *;
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: auto;
+
+  &__texts {
+    @include align(flex, center, left);
+    flex-direction: column;
+    gap: 3.8rem;
+    padding: 0 8rem;
+
+    &__title {
+      font-size: 3.5rem;
+      width: 30rem;
+      color: $vdsBlue;
+    }
+    &__paragraph {
+      font-weight: lighter;
+      color: $darkgrayblue;
+    }
+    &__link {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: "Fraunces", serif;
+      color: $vdsBlue;
+      font-weight: 900;
+
+      position: relative;
+      z-index: 0;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 69%;
+        width: 27%;
+        height: 1rem;
+
+        left: -1%;
+        border-radius: 90px;
+        background-color: $yellow;
+
+        /* draw behind child elements */
+        z-index: -1;
+      }
+    }
+  }
+
+  &__image {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 50rem;
+    }
+  }
+}
