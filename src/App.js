@@ -1,5 +1,6 @@
 import React from "react";
 import CTA from "./components/CTA";
+import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import Testimonials from "./components/Testimonials";
 
@@ -9,6 +10,7 @@ const App = () => {
       <Header />
       <CTA />
       <Testimonials />
+      <Gallery />
     </div>
   );
 };
