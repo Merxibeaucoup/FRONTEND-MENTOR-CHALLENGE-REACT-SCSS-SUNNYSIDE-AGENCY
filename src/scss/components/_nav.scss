@@ -74,24 +74,26 @@
   border: none;
   outline: none;
   color: #000;
+  display: none;
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 600px) {
+    display: block;
     visibility: visible;
     opacity: 1;
   }
 }
 
 .responsive_nav {
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 600px) {
     transform: none;
   }
 }
 
 .nav-close-btn {
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 600px) {
     position: absolute;
     top: 2rem;
     right: 2rem;
