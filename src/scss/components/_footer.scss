@@ -1,0 +1,43 @@
+@use "../abstracts/" as *;
+.footer {
+  background-color: $fbg;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 4rem 0;
+
+  &__heading {
+    @include align(flex, center, center);
+    color: $cyan;
+    font-weight: 800;
+    font-size: 3rem;
+  }
+
+  &__middle {
+    list-style: none;
+    color: $cyan;
+
+    @include align(flex, center, center);
+    gap: 2.5rem;
+
+    li {
+      cursor: pointer;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  &__icons {
+    padding-top: 2rem;
+    list-style: none;
+    @include align(flex, center, center);
+    gap: 2.5rem;
+    cursor: pointer;
+    svg {
+      path:hover {
+        fill: $white;
+      }
+    }
+  }
+}

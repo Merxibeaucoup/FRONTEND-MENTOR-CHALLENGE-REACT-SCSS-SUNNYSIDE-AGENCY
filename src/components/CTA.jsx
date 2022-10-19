@@ -8,9 +8,9 @@ const CTA = () => {
   return (
     <div className="snake">
       <div className="row">
-        <div className="row__texts">
+        <div className="row__texts ">
           <h3 className="row__texts__title">Transform your brand</h3>
-          <p className="row__texts__paragraph">
+          <p className="row__texts__paragraph ">
             We are a full-service creative agency specializing in helping brands
             grow fast. Engage your clients through compelling visuals that do
             most of the marketing for you.
@@ -29,7 +29,7 @@ const CTA = () => {
         </div>
         <div className="row__texts">
           <h3 className="row__texts__title">Stand out to the right audience</h3>
-          <p className="row__texts__paragraph">
+          <p className="row__texts__paragraph ">
             Using a collaborative formula of designers, researchers,
             photographers, videographers, and copywriters, we’ll build and
             extend your brand in digital places.

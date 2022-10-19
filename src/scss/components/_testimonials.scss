@@ -46,4 +46,9 @@
 .content-container {
   @include align(flex, center, center);
   gap: 4rem;
+  // mobile
+  @media only screen and (max-width: 37.5em) {
+    @include align(flex, center, center);
+    flex-direction: column;
+  }
 }

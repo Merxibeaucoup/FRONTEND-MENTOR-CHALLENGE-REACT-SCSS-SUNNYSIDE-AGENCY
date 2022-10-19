@@ -5,24 +5,95 @@
   font-family: "Barlow", sans-serif;
   @include align(flex, space-between, center);
   padding: 2rem 2rem;
+
   &__items {
     list-style: none;
     @include align(flex, center, center);
     gap: 3rem;
+    // responsive nav
+    @media only screen and (max-width: 1024px) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      background-color: aqua;
+      transition: 1s;
+      transform: translateY(-100vh);
+    }
+
+    @media only screen and (max-width: 600px) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      background-color: aqua;
+      transition: 1s;
+      transform: translateY(-100vh);
+    }
 
     li {
       a {
         text-decoration: none;
         color: $white;
+        @media only screen and (max-width: 1024px) {
+          font-size: 1.5rem;
+        }
       }
-      &:last-child a {
+      &:last-of-type a {
         font-family: "Fraunces", serif;
         text-transform: uppercase;
         color: $vdsBlue;
         padding: 1rem 1.5rem;
         background-color: $white;
         border-radius: 100rem;
+        &:hover {
+          background-color: #3d99c052;
+          color: $white;
+        }
       }
     }
+  }
+}
+
+.nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #000;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+
+  @media only screen and (max-width: 1024px) {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.responsive_nav {
+  @media only screen and (max-width: 1024px) {
+    transform: none;
+  }
+}
+
+.nav-close-btn {
+  @media only screen and (max-width: 1024px) {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
   }
 }

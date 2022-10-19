@@ -1,14 +1,17 @@
 .gallery {
-  width: 100%;
-  height: fit-content;
-
   &__row {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     overflow: hidden;
 
+    @media only screen and (max-width: 37.5em) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
     &__item {
       height: 37rem;
+      @media only screen and (max-width: 37.5em) {
+        height: 27rem;
+      }
 
       img {
         width: 100%;
