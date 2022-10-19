@@ -10,45 +10,32 @@
     list-style: none;
     @include align(flex, center, center);
     gap: 3rem;
-    // responsive nav
-    @media only screen and (max-width: 1024px) {
-      position: fixed;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 2rem;
-      background-color: aqua;
-      transition: 1s;
-      transform: translateY(-100vh);
-    }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 37.5em) {
       position: fixed;
       left: 0;
       top: 0;
-      height: 100%;
+      transform: translate(-50%, -50%);
+      height: 45%;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      gap: 2rem;
-      background-color: aqua;
+      gap: 2.5rem;
+      background-color: $white;
       transition: 1s;
       transform: translateY(-100vh);
+      z-index: 9999;
     }
 
     li {
       a {
         text-decoration: none;
         color: $white;
-        @media only screen and (max-width: 1024px) {
-          font-size: 1.5rem;
+        @media only screen and (max-width: 37.5em) {
+          font-size: 2rem;
+          color: $vdgrayblue;
         }
       }
       &:last-of-type a {
@@ -61,6 +48,9 @@
         &:hover {
           background-color: #3d99c052;
           color: $white;
+        }
+        @media only screen and (max-width: 37.5em) {
+          background-color: $yellow;
         }
       }
     }
@@ -79,7 +69,7 @@
   opacity: 0;
   font-size: 1.8rem;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 37.5em) {
     display: block;
     visibility: visible;
     opacity: 1;
@@ -87,13 +77,13 @@
 }
 
 .responsive_nav {
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 37.5em) {
     transform: none;
   }
 }
 
 .nav-close-btn {
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 37.5em) {
     position: absolute;
     top: 2rem;
     right: 2rem;
