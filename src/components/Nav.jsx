@@ -28,11 +28,11 @@ const Nav = () => {
             <li>
               <a href="/contact">Contact</a>
             </li>
-          </ul>
 
-          <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-            <FaTimes />
-          </button>
+            <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+              <FaTimes />
+            </button>
+          </ul>
         </nav>
         <button className="nav-btn " onClick={showNavbar}>
           <FaBars />
