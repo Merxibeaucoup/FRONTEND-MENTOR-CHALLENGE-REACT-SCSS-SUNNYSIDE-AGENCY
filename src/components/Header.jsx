@@ -6,22 +6,24 @@ const Header = () => {
 
   const dArrow = "./assets/images/icon-arrow-down.svg";
   return (
-    <div
-      className="header"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
-      }}
-    >
-      <Nav />
+    <header>
+      <div
+        className="header"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+        }}
+      >
+        <Nav />
 
-      <div className="header__contents">
-        <h2 className="header__contents__heading">we are creatives</h2>
-        <div className="header__contents__arrow">
-          <img src={dArrow} alt="arrow down" />
+        <div className="header__contents">
+          <h2 className="header__contents__heading">we are creatives</h2>
+          <div className="header__contents__arrow">
+            <img src={dArrow} alt="arrow down" />
+          </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
