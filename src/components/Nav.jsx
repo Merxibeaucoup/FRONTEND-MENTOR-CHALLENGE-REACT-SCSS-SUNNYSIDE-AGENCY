@@ -26,12 +26,15 @@ const Nav = () => {
               <a href="/projects">Projects</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <a className="nb" href="/contact">
+                Contact
+              </a>
             </li>
-
-            <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-              <FaTimes />
-            </button>
+            <li>
+              <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+                <FaTimes />
+              </button>
+            </li>
           </ul>
         </nav>
         <button className="nav-btn " onClick={showNavbar}>
